@@ -79,7 +79,7 @@ func getInstances(region string, humanregion string, goGroup *sync.WaitGroup) {
 					if *inst.Tags[tag].Key == "Name" {
 						thisName = *inst.Tags[tag].Value
 					}
-					if *inst.Tags[tag].Key == "Backup" {
+					if *inst.Tags[tag].Key == "Backup" || *inst.Tags[tag].Key == "backup" {
 						thisBackup = *inst.Tags[tag].Value
 					}
 				}
